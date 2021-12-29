@@ -1,0 +1,1 @@
+Best practice for logging database query is pg_stat_statements extension 
