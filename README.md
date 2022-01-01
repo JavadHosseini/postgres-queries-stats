@@ -1,3 +1,4 @@
+## this code uses pg_stat_statements extension to monitor users queries
 ## to use pg_stat_statements you should follow steps below:
 
 1. CREATE EXTENSION pg_stat_statements;

@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: Postgres Queries
+  contact: {}
+  version: '0.0'
+servers:
+  - url: localhost:3000/api/v1/
+
+paths:
+  /list:
+    get:
+      summary: returns list of queries
+      operationId: list
+      parameters:
+      - name: type
+        in: query
+        description: query type
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: select
+      - name: sort
+        in: query
+        description: mean time sorting
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: asc
+      - name: page_number
+        in: query
+        description: page number
+        required: true
+        style: simple
+        schema:
+          type: integer
+          example: 1
+      - name: per_page
+        in: query
+        description: per page
+        required: true
+        style: simple
+        schema:
+          type: integer
+          example: 10
+      responses:
+        200:
+          description: ''
+        400:
+          description: 'page is not valid/ per_page is not valid'
+      deprecated: false
